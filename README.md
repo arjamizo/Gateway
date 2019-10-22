@@ -18,3 +18,58 @@
         <img src="http://img.shields.io/badge/swift-5.1-brightgreen.svg" alt="Swift 5.1">
     </a>
 </p>
+
+## Summary
+
+Simple API gateway created with Vapor written in Swift.
+
+## Table of Contents
+* [Summary](#summary)
+* [Features](#features)
+* [Getting Started](#getting-started)
+* [Contributing](#contributing)
+* [Community](#community)
+
+## Features
+
+Proxy looks for microservice name as first url string component. 
+For example given path: `/user/abc/123` would be recognized as `user` service. 
+
+Configuration is loaded via enviromental variables where:
+
+variable name is `HOST:{service}` in this case `user` which would be `HOST:user`
+as value it should be JSON containing data such as:
+
+1. Host
+
+2. flag if client should be authorised
+
+```
+{
+    "host":"http://localhost:8081/v1",
+    "loginRequired":false
+}
+```
+
+### Client uthorisation 
+
+You need to specify URL for service responsible to validate token and provide owner/user id. 
+You do it by adding env variable `AUTH` which points to fully declared addres for instance `http://localhost:8081/v1/users/id`
+
+## Getting Started
+
+Getting Started guide, tutorials, and API reference take a look into unit tests.
+
+## Contributing
+
+All improvements are very welcome! Here's how to get started.
+
+1. Clone this repository.
+
+  `$ git clone https://github.com/.../...`
+
+2. Build and run tests.
+
+  `$ swift test`
+
+## Community
