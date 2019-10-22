@@ -18,7 +18,7 @@ final class AppTests: XCTestCase {
     }
     
     func testHost() throws {
-        let tokenResponse = try app.sendRequest(to: "/users/login/abc/123", method: .POST)
+        let tokenResponse = try app.sendRequest(to: "/users/login", method: .GET)
         XCTAssertEqual(tokenResponse.http.status.code, 401)
     }
 }
