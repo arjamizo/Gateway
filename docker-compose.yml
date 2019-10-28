@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  vms-gateway:
+    build:
+      context: .
+      dockerfile: ./web.Dockerfile
+    image: vapormicroservice-gateway
+    ports:
+      - "9000:80"

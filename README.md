@@ -17,6 +17,9 @@
     <a href="https://swift.org">
         <img src="http://img.shields.io/badge/swift-5.1-brightgreen.svg" alt="Swift 5.1">
     </a>
+    <a href="https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/arjamizo/Gateway/master/docker-compose.yml">
+        <img src="https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png" alt="Try in Play-with-Docker">
+    </a>
 </p>
 
 ## Summary
